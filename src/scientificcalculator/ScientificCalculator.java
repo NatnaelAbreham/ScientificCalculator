@@ -90,7 +90,7 @@ public class ScientificCalculator extends JFrame {
 
         p1 = new JPanel(new GridLayout(7, 4));
         
-        /* from line 92 to 179 is only for decoring.you can scape this line if ypu went*/
+        /* from line 92 to 179 is only for decoring.you can scape this line if ypu want*/
         
         equal.setFont(new Font("Monospaced", 1, 30));
         dot.setFont(new Font("Monospaced", 1, 30));
@@ -457,7 +457,7 @@ public class ScientificCalculator extends JFrame {
                  change the string to arrays of character and get the length of the array,
                  then decrement length of the array by one and store the value to ch3 and assign again to store1.
                  store1 variable used for inner calculation and
-                 store displaying on the textarea and used for control user interaction
+                 store variable used to displaying on the textarea and used for control user interaction
                  */
 
                 //check if the string is empty
@@ -528,7 +528,7 @@ public class ScientificCalculator extends JFrame {
 
         for (int i = 0; i < number.length(); i++) {
 
-            String num1 = "", num2 = "", num3 = "";//used fore temporarly storage num1 for bracket num2 for before bracket num3 after bracket
+            String num1 = "", num2 = "", num3 = "";//used fore temporarily storage num1 for bracket num2 for before bracket num3 after bracket
 
             if (charnum[i] == ')') {
 
@@ -574,7 +574,7 @@ public class ScientificCalculator extends JFrame {
             //jj start with 1 b/c a number start with *and/ rather than +- lead an error
         bracketin = s;
         /*bracketin is a temporary variable for bracket, its value changed each time the if statement is excuted
-         it helps not calling bracket method recursively */
+          */
         for (int jj = 0; jj < bracketin.length(); jj++) {
             char ch[] = bracketin.toCharArray();
             if (ch[jj] == 'c') {
@@ -836,7 +836,7 @@ public class ScientificCalculator extends JFrame {
         for (int t = 0; t < (jj - left); t++) {
             num1 += String.valueOf(ch[t]);
         }
-        /* +1 is added because it start from the next one. right and left priviously occupied 
+        /* +1 is added because it start from the next one. right and left previously occupied 
          (jj -left means from the first index before left the +1 mean after (jj-left)and left and right*/
         for (int t = (left + right + (jj - left) + 1); t < ch.length; t++) {
             num3 += String.valueOf(ch[t]);
@@ -889,8 +889,7 @@ public class ScientificCalculator extends JFrame {
         for (int t = 0; t < (jj - left); t++) {
             num1 += String.valueOf(ch[t]);
         }
-        /* +1 is added because it start from the next one. right and left priviously occupied 
-         (jj -left means from the first index before left the +1 mean after (jj-left)and left and right*/
+         
         for (int t = (left + (jj - left) + 1); t < ch.length; t++) {
             num3 += String.valueOf(ch[t]);
         }
